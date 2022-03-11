@@ -1,0 +1,1 @@
+{"dual_encoder_config_file": "/tmp/data/smith_wsp_pretrain_32_48_sb4_db3_ssa6.pbtxt", "output_dir": "/tmp/data/gwmv2_neg1_smith_wsp_pretrain_32_48_sb4_db3_ssa6_run1/1-learning_rate=5e-05", "schedule": "train", "debugging": false, "learning_rate": 5e-05, "num_warmup_steps": 50000, "num_train_steps": 1000000, "num_tpu_cores": 32}

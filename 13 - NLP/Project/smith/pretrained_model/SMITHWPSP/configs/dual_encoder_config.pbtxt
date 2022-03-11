@@ -1,0 +1,33 @@
+encoder_config {
+  bert_config_file: "/tmp/data/sent_bert_4l_config.json"
+  doc_bert_config_file: "/tmp/data/doc_bert_3l_256h_config.json"
+  vocab_file: "/tmp/data/vocab.txt"
+  max_seq_length: 32
+  max_predictions_per_seq: 5
+  max_sent_length_by_word: 32
+  max_doc_length_by_sentence: 64
+  loop_sent_number_per_doc: 48
+  sent_bert_trainable: true
+  model_name: "smith_dual_encoder"
+  num_labels: 2
+  max_masked_sent_per_doc: 2
+  use_masked_sentence_lm_loss: true
+  doc_rep_combine_mode: "normal"
+  doc_rep_combine_attention_size: 256
+}
+train_eval_config {
+  input_file_for_train: "/path"
+  input_file_for_eval: "/path"
+  train_batch_size: 32
+  eval_batch_size: 32
+  predict_batch_size: 32
+  max_eval_steps: 1000
+  save_checkpoints_steps: 10000
+  iterations_per_loop: 10000
+  eval_with_eval_data: true
+  neg_to_pos_example_ratio: 1.0
+}
+loss_config {
+  similarity_score_amplifier: 6.0
+}
+
